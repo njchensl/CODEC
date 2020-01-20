@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CODEC:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CODEC_jar</output-path>
+    <root id="archive" name="CODEC.jar">
+      <element id="module-output" name="CODEC" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/Flat_UI/flatlaf-0.22.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
