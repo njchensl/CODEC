@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
 public class GUI {
@@ -21,7 +22,7 @@ public class GUI {
     public GUI() {
         btnEncode.addActionListener(e -> {
             String txtToEncode = this.txtToEncode.getText();
-            byte[] encodedBytes = txtToEncode.getBytes();
+            byte[] encodedBytes = txtToEncode.getBytes(StandardCharsets.UTF_8);
             String encoded = new String(Base64.getEncoder().encode(encodedBytes));
             txtEncoded.setText(encoded);
             this.txtToEncode.setText("");
@@ -66,7 +67,7 @@ public class GUI {
         btnDecode.addActionListener(e -> {
             String txtToDecode = this.txtToDecode.getText();
             byte[] base64Bytes = Base64.getDecoder().decode(txtToDecode);
-            txtDecoded.setText(new String(base64Bytes));
+            txtDecoded.setText(new String(base64Bytes, StandardCharsets.UTF_8));
             this.txtToDecode.setText("");
         });
 
