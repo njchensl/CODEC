@@ -14,10 +14,14 @@ public class GUI {
     private JPanel pnl;
     private JButton btnEncode;
     private JButton btnDecode;
-    private JTextField txtToEncode;
-    private JTextField txtEncoded;
-    private JTextField txtToDecode;
-    private JTextField txtDecoded;
+    private JTextArea txtToEncode;
+    private JTextArea txtEncoded;
+    private JTextArea txtToDecode;
+    private JTextArea txtDecoded;
+    private JScrollPane spToEncode;
+    private JScrollPane spEncoded;
+    private JScrollPane spToDecode;
+    private JScrollPane spDecoded;
 
     public GUI() {
         btnEncode.addActionListener(e -> {
